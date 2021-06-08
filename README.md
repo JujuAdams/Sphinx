@@ -10,6 +10,4 @@
 
 &nbsp;
 
-Sphinx is a basic encryption system. It'll suffice for protecting basic game data but should not be used for storing confidential information, such as identifying personal details or banking details.
-
-This library is released under the MIT License, without warranty of any kind.
+Sphinx is a basic encryption system. It'll suffice for protecting basic game data but should not be used for storing confidential information, such as identifying personal details or banking details. This library is released under the MIT License, without warranty of any kind.
