@@ -12,7 +12,7 @@ function SphinxDecryptBufferExt(_buffer, _offset, _size, _key)
     
     var _i = 0;
     var _state = _key;
-    repeat((SPHINX_MAX_ENCRYPTED_BYTES == undefined)? _size : min(SPHINX_MAX_ENCRYPTED_BYTES, _size))
+    repeat(min(SPHINX_MAXIMUM_XOR_BYTES, _size))
     {
         //Basic XORShift32, nothing fancy
         _state ^= _state << 13;

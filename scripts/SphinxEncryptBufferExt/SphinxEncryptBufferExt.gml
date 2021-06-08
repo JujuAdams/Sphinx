@@ -12,7 +12,7 @@ function SphinxEncryptBufferExt(_buffer, _offset, _size, _key)
     var _compressed_size = buffer_get_size(_compressed);
     var _i = 0;
     var _state = _key;
-    repeat((SPHINX_MAX_ENCRYPTED_BYTES == undefined)? _compressed_size : min(SPHINX_MAX_ENCRYPTED_BYTES, _compressed_size))
+    repeat(min(SPHINX_MAXIMUM_XOR_BYTES, _compressed_size))
     {
         //Basic XORShift32, nothing fancy
         _state ^= _state << 13;
@@ -26,3 +26,16 @@ function SphinxEncryptBufferExt(_buffer, _offset, _size, _key)
     
     return _compressed;
 }
+
+
+
+
+
+#region (System)
+
+#macro  __SPHINX_VERSION  "1.0.0"
+#macro  __SPHINX_DATE     "2021-06-08"
+
+show_debug_message("Welcome to Sphinx by @jujuadams! This is version " + string(__SPHINX_VERSION) + ", " + string(__SPHINX_DATE));
+
+#endregion

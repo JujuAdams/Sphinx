@@ -5,8 +5,6 @@
 
 function SphinxEncryptString(_string, _key)
 {
-    var _time = get_timer();
-    
     var _buffer = buffer_create(string_byte_length(_string), buffer_fixed, 1);
     buffer_write(_buffer, buffer_text, _string);
     
@@ -15,8 +13,6 @@ function SphinxEncryptString(_string, _key)
     
     var _result = buffer_base64_encode(_encrypted, 0, buffer_get_size(_encrypted));
     buffer_delete(_encrypted);
-    
-    show_debug_message(string(get_timer() - _time));
     
     return _result;
 }
