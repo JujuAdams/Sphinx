@@ -11,3 +11,5 @@
 &nbsp;
 
 Sphinx is a basic encryption system. It'll suffice for protecting game data but should not be used for storing confidential information, such as identifying personal details or banking details. This library is released under the MIT License, without warranty of any kind.
+
+Remember that no security is unbeatable: it is a case of *when* security is broken rather than *if* it can be. Encryption just slows the process. Think carefully about what data you absolutely need to protect in your game and always export builds using YYC!
