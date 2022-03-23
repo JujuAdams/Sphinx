@@ -18,6 +18,6 @@ The method used to encrypt is:
 1. Compress a buffer using GM's native zlib implementation
 2. Use a PRNG to XOR bytes in the compressed buffer
 
-Decryption is the reverse.
+Decryption is the reverse. The PRNG used is XORShift32 with a 64-bit key. This method resists casual attacks but will not stand up to a determined adversary.
 
 By default, the entire buffer is XOR'd though this is ultimately overkill for very large buffers and deleterious for performance -`SPHINX_MAXIMUM_XOR_BYTES` can be set to limit how many bytes should be XOR'd.
