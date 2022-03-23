@@ -14,8 +14,10 @@ Sphinx is a basic encryption system. It's suitable for rudimentary protection of
 
 Remember that no security is unbeatable: it is a case of *when* security is broken rather than *if* it can be. Encryption just slows the process. Think carefully about what data you absolutely need to protect in your game and always export builds using YYC!
 
-The method used here is:
+The method used to encrypt is:
 1. Compress a buffer using GM's native zlib implementation
 2. Use a PRNG to XOR bytes in the compressed buffer
+
+Decryption is the reverse.
 
 By default, the entire buffer is XOR'd though this is ultimately overkill for very large buffers and deleterious for performance -`SPHINX_MAXIMUM_XOR_BYTES` can be set to limit how many bytes should be XOR'd.
