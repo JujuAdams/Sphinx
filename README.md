@@ -4,7 +4,7 @@
 
 <p align="center"><a href="https://github.com/JujuAdams/Sphinx/releases/">Download the .yymps</a></p>
 
-<p align="center">Chat about Sphinx on the <a href="https://discord.gg/8krYCqr">Discord server</a></p>
+<p align="center">Chat about Sphinx on the <a href="https://discord.gg/e9wrvnCWkK">Discord server</a></p>
 
 &nbsp;
 
